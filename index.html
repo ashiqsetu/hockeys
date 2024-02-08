@@ -13,13 +13,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        clifford: '#da373d',
-                    }
-                }
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+                'primaryColor': '#131318',
+                'secondaryColor': '#FF4240',
+              }
             }
+          }
         }
     </script>
     <style>
@@ -30,17 +32,38 @@
             width: 1170px !important;
             margin: 0 auto;
         }
+        @media (max-width: 1199.98px) {
+            .container {
+                width: 960px !important;
+            }
+        }
+        @media (max-width: 991.98px) {
+            .container {
+                width: 720px !important;
+            }
+        }
+        @media (max-width: 767.98px) {
+            .container {
+                width: 540px !important;
+            }
+        }
+        @media (max-width: 575.98px) {
+            .container {
+                width: 100% !important;
+                padding: 0 15px;
+            }
+        }
     </style>
 </head>
 
-<body class="font-manrope">
+<body class="font-manrope m-0 p-0">
     <!-- Header section start  -->
     <header>
         <div class="container">
-            <div class="navbar bg-base-100">
+            <div class="navbar bg-base-100 p-0 my-6 lg:my-12 min-h-max">
                 <div class="navbar-start">
                   <div class="dropdown">
-                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                    <div tabindex="0" role="button" class="lg:hidden">
                       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </div>
                     <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
@@ -51,54 +74,70 @@
                         <li><a>Contact</a></li>
                     </ul>
                   </div>
-                  <a href="index.html" class="logo">Hockey<span>’</span>s</a>
+                  <a href="index.html" class="text-primaryColor font-extrabold text-2xl lg:text-4xl ml-4 lg:ml-0">Hockey<span class="text-secondaryColor">’</span>s</a>
                 </div>
                 <div class="navbar-center hidden lg:flex">
-                  <ul class="menu menu-horizontal px-1">
-                    <li><a>Home</a></li>
-                    <li><a>About</a></li>
-                    <li><a>Pages</a></li>
-                    <li><a>Blog</a></li>
-                    <li><a>Contact</a></li>
+                  <ul class="inline-flex gap-11">
+                    <li><a class="transition-all text-base cursor-pointer hover:text-secondaryColor hover:font-semibold">Home</a></li>
+                    <li><a class="transition-all text-base cursor-pointer hover:text-secondaryColor hover:font-semibold">About</a></li>
+                    <li><a class="transition-all text-base cursor-pointer hover:text-secondaryColor hover:font-semibold">Pages</a></li>
+                    <li><a class="transition-all text-base cursor-pointer hover:text-secondaryColor hover:font-semibold">Blog</a></li>
+                    <li><a class="transition-all text-base cursor-pointer hover:text-secondaryColor hover:font-semibold">Contact</a></li>
                   </ul>
                 </div>
-                <div class="navbar-end">
-                    <a href="#"><i class="fa fa-search"></i></a>
-                    <a class="btn">Get Ticket</a>
+                <div class="navbar-end gap-6">
+                    <a class="text-[#89898B] text-xl cursor-pointer hidden lg:inline-block"><i class="fa fa-search"></i></a>
+                    <a class="bg-secondaryColor text-white px-4 lg:px-6 py-2 lg:py-[15px] text-lg lg:text-xl font-bold rounded-lg cursor-pointer">Get Ticket</a>
                 </div>
             </div>
         </div>
     </header>
     <!-- Slider section start  -->
-    <section>
+    <section class="">
         <div class="container">
-            <div class="carousel w-full">
+            <div class="carousel w-full h-[550px]">
                 <div id="slide1" class="carousel-item relative w-full">
-                  <img src="img/1.png" class="w-full" />
-                  <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide4" class="btn btn-circle">❮</a> 
-                    <a href="#slide2" class="btn btn-circle">❯</a>
+                  <img src="img/1.png" class="w-full object-cover rounded-2xl" />
+                  <div class="absolute bottom-8 right-8 p-8 bg-primaryColor rounded-2xl w-2/4">
+                    <h5 class="text-white font-extrabold text-2xl mb-4">Meet all the heroes from the field</h5>
+                    <p class="text-base font-medium text-[#ffffff99]">Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor. Purus urna in sit nullam proin.</p>
+                  </div>
+                  <div class="absolute flex gap-4 transform left-8 bottom-8">
+                    <a href="#slide4" class="btn btn-circle border-0 border-none text-xl bg-primaryColor text-white hover:bg-secondaryColor">❮</a> 
+                    <a href="#slide2" class="btn btn-circle border-0 border-none text-xl bg-primaryColor text-white hover:bg-secondaryColor">❯</a>
                   </div>
                 </div> 
                 <div id="slide2" class="carousel-item relative w-full">
-                  <img src="img/2.png" class="w-full" />
-                  <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide1" class="btn btn-circle">❮</a> 
-                    <a href="#slide3" class="btn btn-circle">❯</a>
+                  <img src="img/2.png" class="w-full object-cover rounded-2xl" />
+                  <div class="absolute bottom-8 right-8 p-8 bg-primaryColor rounded-2xl w-2/4">
+                    <h5 class="text-white font-extrabold text-2xl mb-4">Meet all the heroes from the field</h5>
+                    <p class="text-base font-medium text-[#ffffff99]">Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor. Purus urna in sit nullam proin.</p>
+                  </div>
+                  <div class="absolute flex gap-4 transform left-8 bottom-8">
+                    <a href="#slide1" class="btn btn-circle border-0 border-none text-xl bg-primaryColor text-white hover:bg-secondaryColor">❮</a> 
+                    <a href="#slide3" class="btn btn-circle border-0 border-none text-xl bg-primaryColor text-white hover:bg-secondaryColor">❯</a>
                   </div>
                 </div> 
                 <div id="slide3" class="carousel-item relative w-full">
-                  <img src="img/3.png" class="w-full" />
-                  <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide2" class="btn btn-circle">❮</a> 
-                    <a href="#slide4" class="btn btn-circle">❯</a>
+                  <img src="img/3.png" class="w-full object-cover rounded-2xl" />
+                  <div class="absolute bottom-8 right-8 p-8 bg-primaryColor rounded-2xl w-2/4">
+                    <h5 class="text-white font-extrabold text-2xl mb-4">Meet all the heroes from the field</h5>
+                    <p class="text-base font-medium text-[#ffffff99]">Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor. Purus urna in sit nullam proin.</p>
+                  </div>
+                  <div class="absolute flex gap-4 transform left-8 bottom-8">
+                    <a href="#slide2" class="btn btn-circle border-0 border-none text-xl bg-primaryColor text-white hover:bg-secondaryColor">❮</a> 
+                    <a href="#slide4" class="btn btn-circle border-0 border-none text-xl bg-primaryColor text-white hover:bg-secondaryColor">❯</a>
                   </div>
                 </div> 
                 <div id="slide4" class="carousel-item relative w-full">
-                  <img src="img/4.png" class="w-full" />
-                  <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide3" class="btn btn-circle">❮</a> 
-                    <a href="#slide1" class="btn btn-circle">❯</a>
+                  <img src="img/4.png" class="w-full object-cover rounded-2xl" />
+                  <div class="absolute bottom-8 right-8 p-8 bg-primaryColor rounded-2xl w-2/4">
+                    <h5 class="text-white font-extrabold text-2xl mb-4">Meet all the heroes from the field</h5>
+                    <p class="text-base font-medium text-[#ffffff99]">Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor. Purus urna in sit nullam proin.</p>
+                  </div>
+                  <div class="absolute flex gap-4 transform left-8 bottom-8">
+                    <a href="#slide3" class="btn btn-circle border-0 border-none text-xl bg-primaryColor text-white hover:bg-secondaryColor">❮</a> 
+                    <a href="#slide1" class="btn btn-circle border-0 border-none text-xl bg-primaryColor text-white hover:bg-secondaryColor">❯</a>
                   </div>
                 </div>
             </div>
@@ -107,7 +146,7 @@
     <!-- Main content area start  -->
     <main>
         <!-- Features section start  -->
-        <section>
+        <!-- <section>
             <div class="container">
                 <div>
                     <h1>Professional Hockeys Club</h1>
@@ -128,9 +167,9 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
         <!-- Program section start  -->
-        <section>
+        <!-- <section>
             <div class="container">
                 <div></div>
                 <div class="grid grid-cols-2 gap-6">
@@ -166,11 +205,11 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
         <!-- New products section start  -->
         <section></section>
         <!-- Clients question section start  -->
-        <section>
+        <!-- <section>
             <div class="container">
                 <div></div>
                 <div class="flex">
@@ -208,10 +247,10 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
     </main>
     <!-- Footer section start  -->
-    <section class="bg-black">
+    <!-- <section class="bg-black">
         <div class="container">
             <footer class="footer p-10">
                 <aside>
@@ -240,7 +279,7 @@
                 </nav>
             </footer>
         </div>
-    </section>
+    </section> -->
 </body>
 
 </html>
