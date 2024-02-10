@@ -2,214 +2,381 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hockeys</title>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.1/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://kit.fontawesome.com/c9d4a398e5.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                clifford: '#da373d',
-                'primaryColor': '#131318',
-                'secondaryColor': '#FF4240',
-              }
-            }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hockeys</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/c9d4a398e5.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+            'primaryColor': '#131318',
+            'secondaryColor': '#FF4240',
           }
         }
-    </script>
-    <style>
-        .font-manrope {
-            font-family: "Manrope", sans-serif;
-        }
-        .container {
-            width: 1170px !important;
-            margin: 0 auto;
-        }
-        @media (max-width: 1199.98px) {
-            .container {
-                width: 960px !important;
-            }
-        }
-        @media (max-width: 991.98px) {
-            .container {
-                width: 720px !important;
-            }
-        }
-        @media (max-width: 767.98px) {
-            .container {
-                width: 540px !important;
-            }
-        }
-        @media (max-width: 575.98px) {
-            .container {
-                width: 100% !important;
-                padding: 0 15px;
-            }
-        }
-    </style>
+      }
+    }
+  </script>
+  <style>
+    .font-manrope {
+      font-family: "Manrope", sans-serif;
+    }
+
+    .container {
+      width: 1170px !important;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 1199.98px) {
+      .container {
+        width: 960px !important;
+      }
+    }
+
+    @media (max-width: 991.98px) {
+      .container {
+        width: 720px !important;
+      }
+    }
+
+    @media (max-width: 767.98px) {
+      .container {
+        width: 540px !important;
+      }
+    }
+
+    @media (max-width: 575.98px) {
+      .container {
+        width: 100% !important;
+        padding: 0 15px;
+      }
+    }
+
+    .program.card.image-full:before {
+      background: rgba(19, 19, 24, .5);
+      opacity: 1;
+    }
+  </style>
 </head>
 
 <body class="font-manrope m-0 p-0">
-    <!-- Header section start  -->
-    <header>
-        <div class="container">
-            <div class="navbar bg-base-100 p-0 my-6 lg:my-12 min-h-max">
-                <div class="navbar-start">
-                  <div class="dropdown">
-                    <div tabindex="0" role="button" class="lg:hidden">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-                    </div>
-                    <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                        <li><a>Home</a></li>
-                        <li><a>About</a></li>
-                        <li><a>Pages</a></li>
-                        <li><a>Blog</a></li>
-                        <li><a>Contact</a></li>
-                    </ul>
-                  </div>
-                  <a href="index.html" class="text-primaryColor font-extrabold text-2xl lg:text-4xl ml-4 lg:ml-0">Hockey<span class="text-secondaryColor">’</span>s</a>
-                </div>
-                <div class="navbar-center hidden lg:flex">
-                  <ul class="inline-flex gap-11">
-                    <li><a class="transition-all text-base cursor-pointer hover:text-secondaryColor hover:font-semibold">Home</a></li>
-                    <li><a class="transition-all text-base cursor-pointer hover:text-secondaryColor hover:font-semibold">About</a></li>
-                    <li><a class="transition-all text-base cursor-pointer hover:text-secondaryColor hover:font-semibold">Pages</a></li>
-                    <li><a class="transition-all text-base cursor-pointer hover:text-secondaryColor hover:font-semibold">Blog</a></li>
-                    <li><a class="transition-all text-base cursor-pointer hover:text-secondaryColor hover:font-semibold">Contact</a></li>
-                  </ul>
-                </div>
-                <div class="navbar-end gap-6">
-                    <a class="text-[#89898B] text-xl cursor-pointer hidden lg:inline-block"><i class="fa fa-search"></i></a>
-                    <a class="bg-secondaryColor text-white px-4 lg:px-6 py-2 lg:py-[15px] text-lg lg:text-xl font-bold rounded-lg cursor-pointer">Get Ticket</a>
-                </div>
+  <!-- Header section start  -->
+  <header>
+    <div class="container">
+      <div class="navbar bg-base-100 p-0 my-6 lg:my-12 min-h-max">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="lg:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+              </svg>
             </div>
+            <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+              <li><a>Home</a></li>
+              <li><a>About</a></li>
+              <li><a>Pages</a></li>
+              <li><a>Blog</a></li>
+              <li><a>Contact</a></li>
+            </ul>
+          </div>
+          <a href="index.html" class="text-primaryColor font-extrabold text-2xl lg:text-4xl ml-4 lg:ml-0">Hockey<span
+              class="text-secondaryColor">’</span>s</a>
         </div>
-    </header>
-    <!-- Slider section start  -->
-    <section class="">
-        <div class="container">
-            <div class="carousel w-full h-[550px]">
-                <div id="slide1" class="carousel-item relative w-full">
-                  <img src="img/1.png" class="w-full object-cover rounded-2xl" />
-                  <div class="absolute bottom-8 right-8 p-8 bg-primaryColor rounded-2xl w-2/4">
-                    <h5 class="text-white font-extrabold text-2xl mb-4">Meet all the heroes from the field</h5>
-                    <p class="text-base font-medium text-[#ffffff99]">Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor. Purus urna in sit nullam proin.</p>
-                  </div>
-                  <div class="absolute flex gap-4 transform left-8 bottom-8">
-                    <a href="#slide4" class="btn btn-circle border-0 border-none text-xl bg-primaryColor text-white hover:bg-secondaryColor">❮</a> 
-                    <a href="#slide2" class="btn btn-circle border-0 border-none text-xl bg-primaryColor text-white hover:bg-secondaryColor">❯</a>
-                  </div>
-                </div> 
-                <div id="slide2" class="carousel-item relative w-full">
-                  <img src="img/2.png" class="w-full object-cover rounded-2xl" />
-                  <div class="absolute bottom-8 right-8 p-8 bg-primaryColor rounded-2xl w-2/4">
-                    <h5 class="text-white font-extrabold text-2xl mb-4">Meet all the heroes from the field</h5>
-                    <p class="text-base font-medium text-[#ffffff99]">Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor. Purus urna in sit nullam proin.</p>
-                  </div>
-                  <div class="absolute flex gap-4 transform left-8 bottom-8">
-                    <a href="#slide1" class="btn btn-circle border-0 border-none text-xl bg-primaryColor text-white hover:bg-secondaryColor">❮</a> 
-                    <a href="#slide3" class="btn btn-circle border-0 border-none text-xl bg-primaryColor text-white hover:bg-secondaryColor">❯</a>
-                  </div>
-                </div> 
-                <div id="slide3" class="carousel-item relative w-full">
-                  <img src="img/3.png" class="w-full object-cover rounded-2xl" />
-                  <div class="absolute bottom-8 right-8 p-8 bg-primaryColor rounded-2xl w-2/4">
-                    <h5 class="text-white font-extrabold text-2xl mb-4">Meet all the heroes from the field</h5>
-                    <p class="text-base font-medium text-[#ffffff99]">Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor. Purus urna in sit nullam proin.</p>
-                  </div>
-                  <div class="absolute flex gap-4 transform left-8 bottom-8">
-                    <a href="#slide2" class="btn btn-circle border-0 border-none text-xl bg-primaryColor text-white hover:bg-secondaryColor">❮</a> 
-                    <a href="#slide4" class="btn btn-circle border-0 border-none text-xl bg-primaryColor text-white hover:bg-secondaryColor">❯</a>
-                  </div>
-                </div> 
-                <div id="slide4" class="carousel-item relative w-full">
-                  <img src="img/4.png" class="w-full object-cover rounded-2xl" />
-                  <div class="absolute bottom-8 right-8 p-8 bg-primaryColor rounded-2xl w-2/4">
-                    <h5 class="text-white font-extrabold text-2xl mb-4">Meet all the heroes from the field</h5>
-                    <p class="text-base font-medium text-[#ffffff99]">Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor. Purus urna in sit nullam proin.</p>
-                  </div>
-                  <div class="absolute flex gap-4 transform left-8 bottom-8">
-                    <a href="#slide3" class="btn btn-circle border-0 border-none text-xl bg-primaryColor text-white hover:bg-secondaryColor">❮</a> 
-                    <a href="#slide1" class="btn btn-circle border-0 border-none text-xl bg-primaryColor text-white hover:bg-secondaryColor">❯</a>
-                  </div>
-                </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="inline-flex gap-11">
+            <li><a
+                class="transition-all text-base cursor-pointer hover:text-secondaryColor hover:font-semibold">Home</a>
+            </li>
+            <li><a
+                class="transition-all text-base cursor-pointer hover:text-secondaryColor hover:font-semibold">About</a>
+            </li>
+            <li><a
+                class="transition-all text-base cursor-pointer hover:text-secondaryColor hover:font-semibold">Pages</a>
+            </li>
+            <li><a
+                class="transition-all text-base cursor-pointer hover:text-secondaryColor hover:font-semibold">Blog</a>
+            </li>
+            <li><a
+                class="transition-all text-base cursor-pointer hover:text-secondaryColor hover:font-semibold">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="navbar-end gap-6">
+          <a class="text-[#89898B] text-xl cursor-pointer hidden lg:inline-block"><i class="fa fa-search"></i></a>
+          <a
+            class="bg-secondaryColor text-white px-4 lg:px-6 py-2 lg:py-[15px] text-lg lg:text-xl font-bold rounded-lg cursor-pointer">Get
+            Ticket</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Slider section start  -->
+  <section class="">
+    <div class="container">
+      <div class="carousel w-full lg:h-[550px]">
+        <div id="slide1" class="carousel-item block relative w-full">
+          <div class="relative h-auto lg:h-full">
+            <img src="img/1.png" class="w-full object-cover rounded-2xl h-[200px] lg:h-full" />
+            <div
+              class="absolute flex gap-4 transform left-1/2 -translate-x-1/2 lg:-translate-x-0 lg:left-8 bottom-5 lg:bottom-8">
+              <a href="#slide4"
+                class="w-7 lg:w-12 h-7 lg:h-12 text-center leading-7 lg:leading-[48px] rounded-full border-0 border-none text-base lg:text-xl bg-primaryColor text-white hover:bg-secondaryColor">❮</a>
+              <a href="#slide2"
+                class="w-7 lg:w-12 h-7 lg:h-12 text-center leading-7 lg:leading-[48px] rounded-full border-0 border-none text-base lg:text-xl bg-primaryColor text-white hover:bg-secondaryColor">❯</a>
             </div>
+          </div>
+          <div
+            class="unset lg:absolute bottom-8 right-8 p-4 lg:p-8 bg-primaryColor rounded-2xl w-full lg:w-2/4 mt-4 lg:mt-0">
+            <h5 class="text-white font-extrabold text-lg lg:text-2xl mb-2 lg:mb-4">Meet all the heroes from the field
+            </h5>
+            <p class="text-sm lg:text-base font-medium leading-6 text-[#ffffff99]">Dit amet consectetur. Condimentum
+              dignissim
+              adipiscing
+              aliquam turpis placerat dolor. Purus urna in sit nullam proin.</p>
+          </div>
         </div>
+        <div id="slide2" class="carousel-item block relative w-full">
+          <div class="relative h-auto lg:h-full">
+            <img src="img/2.png" class="w-full object-cover rounded-2xl h-[200px] lg:h-full" />
+            <div
+              class="absolute flex gap-4 transform left-1/2 -translate-x-1/2 lg:-translate-x-0 lg:left-8 bottom-5 lg:bottom-8">
+              <a href="#slide1"
+                class="w-7 lg:w-12 h-7 lg:h-12 text-center leading-7 lg:leading-[48px] rounded-full border-0 border-none text-base lg:text-xl bg-primaryColor text-white hover:bg-secondaryColor">❮</a>
+              <a href="#slide3"
+                class="w-7 lg:w-12 h-7 lg:h-12 text-center leading-7 lg:leading-[48px] rounded-full border-0 border-none text-base lg:text-xl bg-primaryColor text-white hover:bg-secondaryColor">❯</a>
+            </div>
+          </div>
+          <div
+            class="unset lg:absolute bottom-8 right-8 p-4 lg:p-8 bg-primaryColor rounded-2xl w-full lg:w-2/4 mt-4 lg:mt-0">
+            <h5 class="text-white font-extrabold text-lg lg:text-2xl mb-2 lg:mb-4">Meet all the heroes from the field
+            </h5>
+            <p class="text-sm lg:text-base font-medium leading-6 text-[#ffffff99]">Dit amet consectetur. Condimentum
+              dignissim
+              adipiscing
+              aliquam turpis placerat dolor. Purus urna in sit nullam proin.</p>
+          </div>
+        </div>
+        <div id="slide3" class="carousel-item block relative w-full">
+          <div class="relative h-auto lg:h-full">
+            <img src="img/3.png" class="w-full object-cover rounded-2xl h-[200px] lg:h-full" />
+            <div
+              class="absolute flex gap-4 transform left-1/2 -translate-x-1/2 lg:-translate-x-0 lg:left-8 bottom-5 lg:bottom-8">
+              <a href="#slide2"
+                class="w-7 lg:w-12 h-7 lg:h-12 text-center leading-7 lg:leading-[48px] rounded-full border-0 border-none text-base lg:text-xl bg-primaryColor text-white hover:bg-secondaryColor">❮</a>
+              <a href="#slide4"
+                class="w-7 lg:w-12 h-7 lg:h-12 text-center leading-7 lg:leading-[48px] rounded-full border-0 border-none text-base lg:text-xl bg-primaryColor text-white hover:bg-secondaryColor">❯</a>
+            </div>
+          </div>
+          <div
+            class="unset lg:absolute bottom-8 right-8 p-4 lg:p-8 bg-primaryColor rounded-2xl w-full lg:w-2/4 mt-4 lg:mt-0">
+            <h5 class="text-white font-extrabold text-lg lg:text-2xl mb-2 lg:mb-4">Meet all the heroes from the field
+            </h5>
+            <p class="text-sm lg:text-base font-medium leading-6 text-[#ffffff99]">Dit amet consectetur. Condimentum
+              dignissim
+              adipiscing
+              aliquam turpis placerat dolor. Purus urna in sit nullam proin.</p>
+          </div>
+        </div>
+        <div id="slide4" class="carousel-item block relative w-full">
+          <div class="relative h-auto lg:h-full">
+            <img src="img/4.png" class="w-full object-cover rounded-2xl h-[200px] lg:h-full" />
+            <div
+              class="absolute flex gap-4 transform left-1/2 -translate-x-1/2 lg:-translate-x-0 lg:left-8 bottom-5 lg:bottom-8">
+              <a href="#slide3"
+                class="w-7 lg:w-12 h-7 lg:h-12 text-center leading-7 lg:leading-[48px] rounded-full border-0 border-none text-base lg:text-xl bg-primaryColor text-white hover:bg-secondaryColor">❮</a>
+              <a href="#slide1"
+                class="w-7 lg:w-12 h-7 lg:h-12 text-center leading-7 lg:leading-[48px] rounded-full border-0 border-none text-base lg:text-xl bg-primaryColor text-white hover:bg-secondaryColor">❯</a>
+            </div>
+          </div>
+          <div
+            class="unset lg:absolute bottom-8 right-8 p-4 lg:p-8 bg-primaryColor rounded-2xl w-full lg:w-2/4 mt-4 lg:mt-0">
+            <h5 class="text-white font-extrabold text-lg lg:text-2xl mb-2 lg:mb-4">Meet all the heroes from the field
+            </h5>
+            <p class="text-sm lg:text-base font-medium leading-6 text-[#ffffff99]">Dit amet consectetur. Condimentum
+              dignissim
+              adipiscing
+              aliquam turpis placerat dolor. Purus urna in sit nullam proin.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Main content area start  -->
+  <main>
+    <!-- Features section start  -->
+    <section class="pt-[40px] lg:pt-[100px]">
+      <div class="container">
+        <div class="text-center py-6 lg:py-8 border-y border-dashed border-[#6c6c7a33] mb-6 lg:mb-12">
+          <h1 class="text-[22px] lg:text-4xl font-extrabold text-primaryColor mb-4 lg:mb-6">Professional Hockeys Club
+          </h1>
+          <p class="w-[300px] lg:w-[55%] m-auto text-sm lg:text-base font-medium text-[#13131899]">Dit amet consectetur.
+            Condimentum dignissim
+            adipiscing aliquam
+            turpis placerat dolor.
+            Purus urna in sit
+            nullam proin. </p>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-4">
+          <div class="text-center">
+            <div class="w-[120px] h-[120px] m-auto border-[12px] rounded-full border-[#E7E7E8]">
+              <div
+                class="radial-progress relative -left-[12px] -top-[12px] text-secondaryColor transform rotate-[135deg]"
+                style="--value:87; --size: 120px; --thickness: 12px;" role="progressbar">
+                <span class="text-primaryColor text-[28px] font-extrabold transform rotate-[-135deg]">87%</span>
+              </div>
+            </div>
+            <h5 class="text-xl font-semibold mt-6 mb-4">Prayer Facility</h5>
+            <p class="text-base text-[#13131899]">Amet consectetur. Condimentum dignissim adipiscing.</p>
+          </div>
+          <div class="text-center mt-6 lg:mt-0">
+            <div class="w-[120px] h-[120px] m-auto border-[12px] rounded-full border-[#E7E7E8]">
+              <div class="radial-progress text-[#49D293] relative -left-[12px] -top-[12px] transform rotate-[135deg]"
+                style="--value:95; --size: 120px; --thickness: 12px;" role="progressbar">
+                <span class="text-primaryColor text-[28px] font-extrabold transform rotate-[-135deg]">95%</span>
+              </div>
+            </div>
+            <h5 class="text-xl font-semibold mt-6 mb-4">Experienced Coach</h5>
+            <p class="text-base text-[#13131899]">Amet consectetur. Condimentum dignissim adipiscing.</p>
+          </div>
+          <div class="text-center mt-6 lg:mt-0">
+            <div class="w-[120px] h-[120px] m-auto border-[12px] rounded-full border-[#E7E7E8]">
+              <div class="radial-progress text-[#FFB546] relative -left-[12px] -top-[12px] transform rotate-[135deg]"
+                style="--value:90; --size: 120px; --thickness: 12px;" role="progressbar">
+                <span class="text-primaryColor text-[28px] font-extrabold transform rotate-[-135deg]">90%</span>
+              </div>
+            </div>
+            <h5 class="text-xl font-semibold mt-6 mb-4">Senior Player</h5>
+            <p class="text-base text-[#13131899]">Amet consectetur. Condimentum dignissim adipiscing.</p>
+          </div>
+          <div class="text-center mt-6 lg:mt-0">
+            <div class="w-[120px] h-[120px] m-auto border-[12px] rounded-full border-[#E7E7E8]">
+              <div class="radial-progress text-[#4C8DF1] relative -left-[12px] -top-[12px] transform rotate-[135deg]"
+                style="--value:80; --size: 120px; --thickness: 12px;" role="progressbar">
+                <span class="text-primaryColor text-[28px] font-extrabold transform rotate-[-135deg]">80%</span>
+              </div>
+            </div>
+            <h5 class="text-xl font-semibold mt-6 mb-4">Training Ground</h5>
+            <p class="text-base text-[#13131899]">Amet consectetur. Condimentum dignissim adipiscing.</p>
+          </div>
+        </div>
+      </div>
     </section>
-    <!-- Main content area start  -->
-    <main>
-        <!-- Features section start  -->
-        <!-- <section>
-            <div class="container">
-                <div>
-                    <h1>Professional Hockeys Club</h1>
-                    <p>Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor. Purus urna in sit nullam proin. </p>
-                </div>
-                <div class="flex">
-                    <div>
-                        <div class="radial-progress" style="--value:70; --size:12rem; --thickness: 2rem;" role="progressbar">70%</div>
-                    </div>
-                    <div>
-                        <div class="radial-progress" style="--value:70; --size:12rem; --thickness: 2rem;" role="progressbar">70%</div>
-                    </div>
-                    <div>
-                        <div class="radial-progress" style="--value:70; --size:12rem; --thickness: 2rem;" role="progressbar">70%</div>
-                    </div>
-                    <div>
-                        <div class="radial-progress" style="--value:70; --size:12rem; --thickness: 2rem;" role="progressbar">70%</div>
-                    </div>
-                </div>
+    <!-- Program section start  -->
+    <section class="pt-[40px] lg:pt-[100px]">
+      <div class="container">
+        <div class="text-center py-6 lg:py-8 border-y border-dashed border-[#6c6c7a33] mb-6 lg:mb-12">
+          <h1 class="text-[22px] lg:text-4xl font-extrabold text-primaryColor mb-4 lg:mb-6">Program Sections
+          </h1>
+          <p class="w-[300px] lg:w-[55%] m-auto text-sm lg:text-base font-medium leading-[24px] text-[#13131899]">Dit
+            amet consectetur.
+            Condimentum dignissim
+            adipiscing aliquam
+            turpis placerat dolor.
+            Purus urna in sit
+            nullam proin. </p>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div class="col-span-2 lg:col-span-1 card bg-primary shadow-xl image-full program">
+            <figure>
+              <img class="w-full" src="img/2.png" alt="Shoes" />
+            </figure>
+            <div class="card-body justify-end p-6 lg:p-10">
+              <h2 class="card-title text-xl lg:text-[28px] font-extrabold text-white">Junior Program</h2>
+              <p
+                class="flex-none text-sm lg:text-base font-medium mt-3 lg:mt-4 mb-5 lg:mb-6 text-white leading-6 lg:leading-[26px]">
+                Dolor sit amet consectetur.
+                Ut urna diam quis sagittis. Elit elit
+                enim sagittis turpis in magna. Id et sed euismod natoque amet nunc morbi nulla. Tortor congue sed et in.
+              </p>
+              <div class="card-actions">
+                <button
+                  class="bg-secondaryColor text-white px-4 lg:px-[22px] py-2 lg:py-[10px] text-lg lg:text-xl font-bold rounded-lg cursor-pointer">Register
+                  Now!</button>
+              </div>
             </div>
-        </section> -->
-        <!-- Program section start  -->
-        <!-- <section>
-            <div class="container">
-                <div></div>
-                <div class="grid grid-cols-2 gap-6">
-                    <div class="card bg-base-100 shadow-xl image-full">
-                        <figure><img src="img/2.png" alt="Shoes" /></figure>
-                        <div class="card-body">
-                        <h2 class="card-title">Shoes!</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
-                        <div class="card-actions justify-end">
-                            <button class="btn btn-primary">Buy Now</button>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="card bg-base-100 shadow-xl image-full">
-                        <figure><img src="img/3.png" alt="Shoes" /></figure>
-                        <div class="card-body">
-                        <h2 class="card-title">Shoes!</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
-                        <div class="card-actions justify-end">
-                            <button class="btn btn-primary">Buy Now</button>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="col-span-2 card bg-base-100 shadow-xl image-full">
-                        <figure><img src="img/4.png" alt="Shoes" /></figure>
-                        <div class="card-body">
-                        <h2 class="card-title">Shoes!</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
-                        <div class="card-actions justify-end">
-                            <button class="btn btn-primary">Buy Now</button>
-                        </div>
-                        </div>
-                    </div>
-                </div>
+          </div>
+          <div class="col-span-2 lg:col-span-1 card bg-base-100 shadow-xl image-full program">
+            <figure>
+              <img class="w-full" src="img/3.png" alt="Shoes" />
+            </figure>
+            <div class="card-body justify-end p-6 lg:p-10">
+              <h2 class="card-title text-xl lg:text-[28px] font-extrabold text-white">Teenager Program</h2>
+              <p
+                class="flex-none text-sm lg:text-base font-medium mt-3 lg:mt-4 mb-5 lg:mb-6 text-white leading-6 lg:leading-[26px]">
+                Dolor sit amet consectetur.
+                Ut urna diam quis sagittis. Elit elit
+                enim sagittis turpis in magna. Id et sed euismod natoque amet nunc morbi nulla. Tortor congue sed et in.
+              </p>
+              <div class="card-actions">
+                <button
+                  class="bg-secondaryColor text-white px-4 lg:px-[22px] py-2 lg:py-[10px] text-lg lg:text-xl font-bold rounded-lg cursor-pointer">Register
+                  Now!</button>
+              </div>
             </div>
-        </section> -->
-        <!-- New products section start  -->
-        <section></section>
-        <!-- Clients question section start  -->
-        <!-- <section>
+          </div>
+          <div class="col-span-2 card bg-base-100 shadow-xl image-full program">
+            <figure>
+              <img class="w-full" src="img/4.png" alt="Shoes" />
+            </figure>
+            <div class="card-body justify-end p-6 lg:p-10">
+              <h2 class="card-title text-xl lg:text-[28px] font-extrabold text-white">Professional Program</h2>
+              <p
+                class="flex-none text-sm lg:text-base font-medium mt-3 lg:mt-4 mb-5 lg:mb-6 text-white leading-6 lg:leading-[26px] w-full lg:w-[42%]">
+                Dolor sit
+                amet
+                consectetur.
+                Ut urna diam quis sagittis. Elit elit
+                enim sagittis turpis in magna. Id et sed euismod natoque amet nunc morbi nulla. Tortor congue sed et in.
+              </p>
+              <div class="card-actions">
+                <button
+                  class="bg-secondaryColor text-white px-4 lg:px-[22px] py-2 lg:py-[10px] text-lg lg:text-xl font-bold rounded-lg cursor-pointer">Register
+                  Now!</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- New products section start  -->
+    <section class="pt-[40px] lg:pt-[100px] pb-24">
+      <div class="container">
+        <div class="text-center py-6 lg:py-8 border-y border-dashed border-[#6c6c7a33] mb-6 lg:mb-12">
+          <h1 class="text-[22px] lg:text-4xl font-extrabold text-primaryColor mb-4 lg:mb-6">Our New Products
+          </h1>
+          <p class="w-[300px] lg:w-[55%] m-auto text-sm lg:text-base font-medium leading-[24px] text-[#13131899]">Dit
+            amet consectetur.
+            Condimentum dignissim
+            adipiscing aliquam
+            turpis placerat dolor.
+            Purus urna in sit
+            nullam proin. </p>
+        </div>
+        <div class="grid grid-cols-2 gap-6">
+          <div class="card lg:card-side bg-base-100 shadow-xl">
+            <figure><img src="https://daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.jpg" alt="Album" />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">New album is released!</h2>
+              <p>Click the button to listen on Spotiwhy app.</p>
+              <div class="card-actions justify-end">
+                <button class="btn btn-primary">Listen</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Clients question section start  -->
+    <!-- <section>
             <div class="container">
                 <div></div>
                 <div class="flex">
@@ -248,9 +415,9 @@
                 </div>
             </div>
         </section> -->
-    </main>
-    <!-- Footer section start  -->
-    <!-- <section class="bg-black">
+  </main>
+  <!-- Footer section start  -->
+  <!-- <section class="bg-black">
         <div class="container">
             <footer class="footer p-10">
                 <aside>
